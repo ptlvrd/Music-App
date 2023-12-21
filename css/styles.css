@@ -1,0 +1,119 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 46px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  color: rgb(153, 50, 50);
+}
+
+p {
+  font-size: 18px;
+  font-family: serif;
+  margin: 0;
+}
+
+#menu button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 1100px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#menu button:hover {
+  background-color: #cdf6cf;
+  color: rgb(149, 92, 17);
+}
+
+#song-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  border: 10px solid #eeebeb;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: calc(33.33% - 60px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card:hover {
+  background-color: goldenrod;
+}
+
+.card-caption {
+  font-family: unset;
+  font-size: 15px;
+  font-weight: italic;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.card-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(149, 27, 62);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+#newsletter-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#newsletter-form button:hover {
+  background-color: goldenrod;
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request New Artist - SoundSync</title>
+    <style>
+            /* Styles for the request_artist.html */
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-family: "Times New Roman", Times, serif;
+        margin:10;
+        color: rgb(153, 50, 50);
+      }
+
+      label {
+        margin:10px;
+        padding: 10px;
+        color: #4caf50;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 10px;;
+        box-sizing: border-box;
+        border: 1px solid goldenrod;
+        border-radius: 4px;
+        background-color: white;
+        color: #000;
+      }
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        box-sizing: border-box;
+        border: 1px solid goldenrod;
+        border-radius: 4px;
+        background-color: white;
+        color: #000;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 1100px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #cdf6cf;
+        color: rgb(149, 92, 17);/
+      }
+      input[type="checkbox"] {
+        margin-right: 0px;
+      }
+      .checkbox-container {
+        display: grid;
+        align-items: center;
+      }
+
+      .checkbox-container input[type="checkbox"] {
+        margin-inline-start: -260px;
+      }
+      #exampleSongsContainer .example-song-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        box-sizing: border-box;
+        border: 1px solid #76ff03;
+        border-radius: 4px;
+        background-color: #76ff03;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Request a New Artist</h1>
+
+    <form id="artist-request-form">
+      <!-- Artist's name -->
+      <label for="artistName">Artist's Name:</label>
+      <input type="text" id="artistName" name="artistName" required />
+
+      <!-- Music Genre -->
+      <label for="musicGenre">Music Genre:</label>
+      <input type="text" id="musicGenre" name="musicGenre" list="genreList" />
+      <datalist id="genreList">
+        <option value="Pop"></option>
+        <option value="Rock"></option>
+        <option value="Hip Hop"></option>
+        <option value="Country"></option>
+        <option value="Electronic"></option>
+        <option value="Jazz"></option>
+        <option value="Classical"></option>
+        <option value="Reggae"></option>
+        <option value="Soul"></option>
+        <option value="R&B"></option>
+      </datalist>
+
+      <!-- Social Media URLs -->
+      <label for="socialMedia">Social Media URLs:</label>
+      <input
+        type="text"
+        id="socialMedia"
+        name="socialMedia"
+        placeholder="Enter URLs separated by commas"
+      />
+
+      <!-- Example Songs and Videos URLs -->
+      <label for="exampleSongs">Example Songs and Videos URLs:</label>
+      <div id="exampleSongsContainer">
+        <input type="text" id="exampleSongs" name="exampleSongs" placeholder="Enter URL" />
+        <button type="button" id="addButton" onclick="addSongInput()">Add</button>
+      </div>
+
+      <!-- Explicit Lyrics Checkbox -->
+      <div class="checkbox-container">
+        <input type="checkbox" id="explicitLyrics" name="explicitLyrics" />
+        <label for="explicitLyrics">Artist's music includes explicit lyrics</label>
+      </div>
+
+      <!-- Description -->
+      <label for="requestDescription">Why should this artist be added? (max 500 characters)</label>
+      <br />
+      <textarea id="requestDescription" name="requestDescription" maxlength="500"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
